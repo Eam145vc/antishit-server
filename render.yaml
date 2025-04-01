@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: anticheat-dashboard
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.18.0
+      - key: REACT_APP_API_URL
+        value: https://anti5-0.onrender.com/api
+      - key: REACT_APP_SOCKET_URL
+        value: https://anti5-0.onrender.com
